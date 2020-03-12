@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{3F108F16-D4A6-4721-AA03-AD44304CB78B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\engine\AffineTransform.cpp" />
+    <ClCompile Include="src\engine\AnimatedSprite.cpp" />
+    <ClCompile Include="src\engine\Camera.cpp" />
+    <ClCompile Include="src\engine\DisplayObject.cpp" />
+    <ClCompile Include="src\engine\DisplayObjectContainer.cpp" />
+    <ClCompile Include="src\engine\Event.cpp" />
+    <ClCompile Include="src\engine\EventDispatcher.cpp" />
+    <ClCompile Include="src\engine\Game.cpp" />
+    <ClCompile Include="src\engine\Scene.cpp" />
+    <ClCompile Include="src\engine\Sound.cpp" />
+    <ClCompile Include="src\engine\Sprite.cpp" />
+    <ClCompile Include="src\engine\Tween.cpp" />
+    <ClCompile Include="src\engine\TweenableParams.cpp" />
+    <ClCompile Include="src\engine\TweenEvent.cpp" />
+    <ClCompile Include="src\engine\TweenJuggler.cpp" />
+    <ClCompile Include="src\engine\TweenListener.cpp" />
+    <ClCompile Include="src\engine\TweenParam.cpp" />
+    <ClCompile Include="src\engine\TweenTransition.cpp" />
+    <ClCompile Include="src\main\main.cpp" />
+    <ClCompile Include="src\main\MyGame.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\engine\AffineTransform.h" />
+    <ClInclude Include="src\engine\AnimatedSprite.h" />
+    <ClInclude Include="src\engine\Camera.h" />
+    <ClInclude Include="src\engine\DisplayObject.h" />
+    <ClInclude Include="src\engine\DisplayObjectContainer.h" />
+    <ClInclude Include="src\engine\Event.h" />
+    <ClInclude Include="src\engine\EventDispatcher.h" />
+    <ClInclude Include="src\engine\EventListener.h" />
+    <ClInclude Include="src\engine\Game.h" />
+    <ClInclude Include="src\engine\Scene.h" />
+    <ClInclude Include="src\engine\Sound.h" />
+    <ClInclude Include="src\engine\Sprite.h" />
+    <ClInclude Include="src\engine\Tween.h" />
+    <ClInclude Include="src\engine\TweenableParams.h" />
+    <ClInclude Include="src\engine\TweenEvent.h" />
+    <ClInclude Include="src\engine\TweenJuggler.h" />
+    <ClInclude Include="src\engine\TweenListener.h" />
+    <ClInclude Include="src\engine\TweenParam.h" />
+    <ClInclude Include="src\engine\TweenTransition.h" />
+    <ClInclude Include="src\main\MyGame.h" />
+    <ClInclude Include="src\plugins\rapidjson\allocators.h" />
+    <ClInclude Include="src\plugins\rapidjson\cursorstreamwrapper.h" />
+    <ClInclude Include="src\plugins\rapidjson\document.h" />
+    <ClInclude Include="src\plugins\rapidjson\encodedstream.h" />
+    <ClInclude Include="src\plugins\rapidjson\encodings.h" />
+    <ClInclude Include="src\plugins\rapidjson\error\en.h" />
+    <ClInclude Include="src\plugins\rapidjson\error\error.h" />
+    <ClInclude Include="src\plugins\rapidjson\filereadstream.h" />
+    <ClInclude Include="src\plugins\rapidjson\filewritestream.h" />
+    <ClInclude Include="src\plugins\rapidjson\fwd.h" />
+    <ClInclude Include="src\plugins\rapidjson\internal\biginteger.h" />
+    <ClInclude Include="src\plugins\rapidjson\internal\clzll.h" />
+    <ClInclude Include="src\plugins\rapidjson\internal\diyfp.h" />
+    <ClInclude Include="src\plugins\rapidjson\internal\dtoa.h" />
+    <ClInclude Include="src\plugins\rapidjson\internal\ieee754.h" />
+    <ClInclude Include="src\plugins\rapidjson\internal\itoa.h" />
+    <ClInclude Include="src\plugins\rapidjson\internal\meta.h" />
+    <ClInclude Include="src\plugins\rapidjson\internal\pow10.h" />
+    <ClInclude Include="src\plugins\rapidjson\internal\regex.h" />
+    <ClInclude Include="src\plugins\rapidjson\internal\stack.h" />
+    <ClInclude Include="src\plugins\rapidjson\internal\strfunc.h" />
+    <ClInclude Include="src\plugins\rapidjson\internal\strtod.h" />
+    <ClInclude Include="src\plugins\rapidjson\internal\swap.h" />
+    <ClInclude Include="src\plugins\rapidjson\istreamwrapper.h" />
+    <ClInclude Include="src\plugins\rapidjson\memorybuffer.h" />
+    <ClInclude Include="src\plugins\rapidjson\memorystream.h" />
+    <ClInclude Include="src\plugins\rapidjson\ostreamwrapper.h" />
+    <ClInclude Include="src\plugins\rapidjson\pointer.h" />
+    <ClInclude Include="src\plugins\rapidjson\prettywriter.h" />
+    <ClInclude Include="src\plugins\rapidjson\rapidjson.h" />
+    <ClInclude Include="src\plugins\rapidjson\reader.h" />
+    <ClInclude Include="src\plugins\rapidjson\schema.h" />
+    <ClInclude Include="src\plugins\rapidjson\stream.h" />
+    <ClInclude Include="src\plugins\rapidjson\stringbuffer.h" />
+    <ClInclude Include="src\plugins\rapidjson\writer.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
