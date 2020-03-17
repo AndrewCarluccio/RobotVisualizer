@@ -32,7 +32,7 @@ void MyGame::updatePosition(int enc_r, int enc_l) {
 	int dl = enc_l - left_encoder;
 
 	double ds = (dr + dl) / (2.0);
-	double d_theta = (dr - dl) / (2.0 * WIDTH);
+	double d_theta = (dr - dl) / (1.0*WIDTH);
 
 	double dx = ds * cos(theta+d_theta);
 	double dy = ds * sin(theta+d_theta);
