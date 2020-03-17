@@ -32,25 +32,25 @@ void MyGame::updatePosition(int enc_r, int enc_l) {
 	int dl = enc_l - left_encoder;
 
 	double ds = (dr + dl) / (2.0);
-	double theta_new = (dr + dl) / (2.0 * WIDTH);
-	double d_theta = theta_new - theta;
-	
-	double dx = ds * cos(theta_new + (d_theta / 2.0));
-	double dy = ds * sin(theta_new + (d_theta / 2.0));
+	double d_theta = (dr - dl) / (2.0 * WIDTH);
+
+	double dx = ds * cos(theta+d_theta);
+	double dy = ds * sin(theta+d_theta);
 
 	robot->position.x += dx;
 	robot->position.y -= dy;
+	robot->rotation += d_theta;
 
 	right_encoder = enc_r;
 	left_encoder = enc_l;
-	theta = theta_new;
+	theta += d_theta;
 
 }
 
 
 void MyGame::update(set<SDL_Scancode> pressedKeys) {
 	if (pressedKeys.find(SDL_SCANCODE_F) != pressedKeys.end()) {
-		updatePosition(right_encoder+30, left_encoder);
+		updatePosition(right_encoder+1, left_encoder);
 
 
 		cout << "Encoders: " << right_encoder <<","<<left_encoder<< endl;
@@ -58,7 +58,7 @@ void MyGame::update(set<SDL_Scancode> pressedKeys) {
 		//cam->moveCameraBy(5, 0);
 	}
 	else if (pressedKeys.find(SDL_SCANCODE_J) != pressedKeys.end()) {
-		updatePosition(right_encoder, left_encoder+30);
+		updatePosition(right_encoder, left_encoder+1);
 
 
 		cout << "Encoders: " << right_encoder << "," << left_encoder << endl;
