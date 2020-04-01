@@ -22,6 +22,11 @@ MyGame::MyGame() : Game(1200, 1000) {
 
 	//WIDTH = robot->getWidth();
 	WIDTH = 80;
+	/*
+	Robot width in real life is 5.5 inches
+	Using 80 pixels as a reference, 1 inch is
+	14.545454 pixels
+	*/
 }
 
 MyGame::~MyGame() {
@@ -31,20 +36,20 @@ MyGame::~MyGame() {
 void MyGame::updatePosition(int enc_r, int enc_l) {
 	//Pixels to Inch Conversion: 1 inch is 14.545454 pixels
 	//Ticks to Inches 1 Inch is 188.46 ticks
-	float ticks_per_revolution = 116; //1496 In Encoders/Rev, 7.938 Inches/Rev, 115.46 Pixels/Rev
-	float circumfrence = 116; //8.0384 In inches, 116.92218 in Pixels
+	float ticks_per_revolution = 115.46; //1496 In Encoders/Rev, 7.938 Inches/Rev, 115.46 Pixels/Rev
+	float circumfrence = 116.922; //8.0384 In inches, 116.92218 in Pixels
 
-	int right_encoder_change = enc_r - right_encoder;
-	int left_encoder_change = enc_l - left_encoder;
+	float right_encoder_change = enc_r - right_encoder;
+	float left_encoder_change = enc_l - left_encoder;
 
-	int dr = circumfrence * (right_encoder_change/ ticks_per_revolution); //In Pixels
-	int dl = circumfrence * (left_encoder_change/ ticks_per_revolution);
+	float dr = circumfrence * (right_encoder_change/ ticks_per_revolution); //In Pixels
+	float dl = circumfrence * (left_encoder_change/ ticks_per_revolution);
 
-	double ds = (dr + dl) / (2.0); //In Pixels
-	double d_theta = (dr - dl) / (1.0*WIDTH);  //In Pixels
+	float ds =  (5.0) * ((dr + dl) / (2.0)); //In Pixels
+	float d_theta = (10.0) * ((dr - dl) / (1.0*WIDTH));  //In Pixels
 
-	double dx = ds * cos(theta);
-	double dy = ds * sin(theta);
+	float dx = ds * float(cos(theta));
+	float dy = ds * float(sin(theta));
 
 	robot->position.x += dx;
 	robot->position.y -= dy;
