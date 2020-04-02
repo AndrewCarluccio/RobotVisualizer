@@ -50,8 +50,8 @@
             {
               "node_id": "Robot",
               "type_id": "Sprite",
-              "locationX": 0,
-              "locationY": 850,
+              "locationX":425,
+              "locationY": 425,
               "scaleX": 0.3,
               "scaleY": 0.3,
               "rotation": 0,

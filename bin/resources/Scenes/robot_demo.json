@@ -1,0 +1,66 @@
+{
+    "node_id": "Root",
+    "type_id": "DisplayObjectContainer",
+    "locationX": 0,
+    "locationY": 0,
+    "scaleX": 1,
+    "scaleY": 1,
+    "rotation": 0,
+    "alpha": 255,
+    "sprite_file_path": "",
+    "children": [
+        {
+            "node_id": "Background",
+            "type_id": "Layer",
+            "locationX": 0,
+            "locationY": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "alpha": 255,
+            "sprite_file_path": "",
+			"scroll_rate": 1,
+            "children" : []
+        },
+        {
+            "node_id": "Midground",
+            "type_id": "Layer",
+            "locationX": 0,
+            "locationY": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "alpha": 255,
+            "sprite_file_path": "",
+			"scroll_rate": 1,
+            "children": []
+        },
+        {
+            "node_id": "Foreground",
+            "type_id": "Layer",
+            "locationX": 0,
+            "locationY": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "alpha": 255,
+            "sprite_file_path": "",
+			"scroll_rate": 1.0,
+          "children": [
+            {
+              "node_id": "Robot",
+              "type_id": "Sprite",
+              "locationX": 425,
+              "locationY": 425,
+              "scaleX": 0.3,
+              "scaleY": 0.3,
+              "rotation": 0,
+              "alpha": 255,
+              "sprite_file_path": "./resources/Scenes/demo_1/robot_image.png",
+              "children": [
+			  ]
+            }
+          ]
+        }
+    ]
+}

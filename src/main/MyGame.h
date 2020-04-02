@@ -48,7 +48,7 @@ public:
 
 	int left_encoder = 0;
 	int right_encoder = 0;
-	double theta = 3.14159 / 2.0;
+	double theta = 0;
 
 	void updatePosition(int enc_r, int enc_l);
 
