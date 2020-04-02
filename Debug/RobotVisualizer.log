@@ -1,4 +1,1 @@
-﻿  MyGame.cpp
-C:\Users\akclu\Documents\GitHub\RobotVisualizer\src\main\MyGame.cpp(40,25): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-C:\Users\akclu\Documents\GitHub\RobotVisualizer\src\main\MyGame.cpp(41,25): warning C4244: '-=': conversion from 'double' to 'int', possible loss of data
-  RobotVisualizer.vcxproj -> C:\Users\akclu\Documents\GitHub\RobotVisualizer\Debug\RobotVisualizer.exe
+﻿  RobotVisualizer.vcxproj -> A:\Documents\GitHub\RobotVisualizer\Debug\RobotVisualizer.exe
