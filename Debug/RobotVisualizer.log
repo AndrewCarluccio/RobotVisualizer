@@ -1,1 +1,6 @@
-﻿  RobotVisualizer.vcxproj -> A:\Documents\GitHub\RobotVisualizer\Debug\RobotVisualizer.exe
+﻿  MyGame.cpp
+A:\Documents\GitHub\RobotVisualizer\src\main\MyGame.cpp(82,16): warning C4244:  'initializing': conversion from 'double' to 'int', possible loss of data
+  main.cpp
+  Generating Code...
+A:\Documents\GitHub\RobotVisualizer\src\main\MyGame.cpp(83,16): warning C4244:  'initializing': conversion from 'double' to 'int', possible loss of data
+  RobotVisualizer.vcxproj -> A:\Documents\GitHub\RobotVisualizer\Debug\RobotVisualizer.exe

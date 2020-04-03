@@ -33,6 +33,7 @@ MyGame::~MyGame() {
 }
 
 
+/*
 void MyGame::updatePosition(int enc_r, int enc_l) {
 	//Pixels to Inch Conversion: 1 inch is 14.545454 pixels
 	//Ticks to Inches 1 Inch is 188.46 ticks
@@ -59,6 +60,31 @@ void MyGame::updatePosition(int enc_r, int enc_l) {
 	left_encoder = enc_l;
 	theta += d_theta;
 
+}
+*/
+
+void MyGame::updatePosition(int enc_r, int enc_l) {
+	int delta_tick_right = enc_r - right_encoder;
+	int delta_tick_left = enc_l - left_encoder;
+
+	double right_inches = delta_tick_right / 188.46;
+	double left_inches = delta_tick_left / 188.46;
+
+	double inches = (right_inches + left_inches) / 2.0;
+
+	total_inches += inches;
+
+	theta += (left_inches - right_inches) / WIDTH;
+
+	inch_y_loc += (inches * cos(theta));
+	inch_x_loc += (inches * sin(theta));
+
+	int pix_y_loc = inch_y_loc / 100; //100ppi
+	int pix_x_loc = inch_x_loc / 100; //100ppi
+
+	robot->position.x = pix_x_loc;
+	robot->position.y = pix_y_loc;
+	robot->rotation = theta * 180 / 3.14159;
 }
 
 
