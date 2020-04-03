@@ -44,7 +44,9 @@ public:
 
 	EventDispatcher* dispatch;
 
-	int WIDTH;
+	float WIDTH;
+	int previousX = 425;
+	int previousY = 425;
 
 	int left_encoder = 0;
 	int right_encoder = 0;

@@ -76,12 +76,14 @@ void MyGame::updatePosition(int enc_r, int enc_l) {
 	float dc =  ((dr + dl) / (2.0)); 
 	float d_theta = theta + ((dr - dl) / (WIDTH)); 
 
-	float dx = position.x + dc * float(cos(theta));	//need previous x position, does this work?
-	float dy = position.y + dc * float(sin(theta));	//need previous y position does this work?
+	float dx = previousX + dc * float(cos(theta));	//need previous x position, does this work?
+	float dy = previousY + dc * float(sin(theta));	//need previous y position does this work?
 
-	robot->position.x += dx * 14.545454;	//only do pixel to inch conversion for output
-	robot->position.y -= dy * 14.545454;	//only do pixel to inch conversion for output
-	robot->rotation += d_theta; 	//what units is this? rotation? 
+	previousX += dx;
+	previousY += dy;
+	robot->position.x += dx * 96;	//only do pixel to inch conversion for output
+	robot->position.y -= dy * 96;	//only do pixel to inch conversion for output
+	robot->rotation += d_theta * (180/3.1415926); 	//what units is this? rotation? 
 
 	right_encoder = enc_r;
 	left_encoder = enc_l;
