@@ -20,6 +20,11 @@ MyGame::MyGame() : Game(1200, 1000) {
 
 	robot = scene->getChild("Robot");
 
+	SDL_Point pv;
+	pv.x = robot->getWidth() / 2.0;
+	pv.y = robot->getHeight() / 2.0;
+	robot->pivot = pv;
+
 	//WIDTH = robot->getWidth();
 	WIDTH = 80;
 	/*
@@ -27,6 +32,9 @@ MyGame::MyGame() : Game(1200, 1000) {
 	Using 80 pixels as a reference, 1 inch is
 	14.545454 pixels
 	*/
+	robot->position.x = 450;
+	robot->position.y = 450;
+
 }
 
 MyGame::~MyGame() {
@@ -75,16 +83,20 @@ void MyGame::updatePosition(int enc_r, int enc_l) {
 	total_inches += inches;
 
 	theta += (left_inches - right_inches) / WIDTH;
+	theta -= (float)((int)(theta / 6.2831853070)) * 6.2831853070;
 
-	inch_y_loc += (inches * cos(theta));
-	inch_x_loc += (inches * sin(theta));
+	inch_y_loc += (inches * cos(theta* 57.2958));
+	inch_x_loc += (inches * sin(theta* 57.2958));
 
-	int pix_y_loc = inch_y_loc / 100; //100ppi
-	int pix_x_loc = inch_x_loc / 100; //100ppi
+	int pix_y_loc = inch_y_loc * 100; //100ppi
+	int pix_x_loc = inch_x_loc * 100; //100ppi
 
-	robot->position.x = pix_x_loc;
-	robot->position.y = pix_y_loc;
-	robot->rotation = theta * 180 / 3.14159;
+	robot->position.x = 450+pix_x_loc;
+	robot->position.y = 450+pix_y_loc;
+	robot->rotation = (theta * 180) / 3.14159;
+
+	right_encoder += delta_tick_right;
+	left_encoder += delta_tick_left;
 }
 
 
@@ -106,7 +118,7 @@ void MyGame::update(set<SDL_Scancode> pressedKeys) {
 		//cam->moveCameraBy(-5, 0);
 	}
 	else if (pressedKeys.find(SDL_SCANCODE_UP) != pressedKeys.end()) {
-		
+		updatePosition(right_encoder + 1, left_encoder + 1);
 
 
 		cout << "Encoders: " << endl;
