@@ -50,6 +50,10 @@ public:
 	int right_encoder = 0;
 	double theta = 0;
 
+	double total_inches = 0;
+	double inch_y_loc = 0;
+	double inch_x_loc = 0;
+
 	void updatePosition(int enc_r, int enc_l);
 
 private:
