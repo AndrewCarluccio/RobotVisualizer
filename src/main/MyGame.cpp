@@ -22,8 +22,11 @@ MyGame::MyGame() : Game(1200, 1000) {
 
 	SDL_Point pv;
 	pv.x = robot->getWidth() / 2.0;
-	pv.y = robot->getHeight() / 2.0;
+	pv.y = robot->getWidth() / 2.0;
 	robot->pivot = pv;
+
+	cout << pv.x << endl;
+	cout << pv.y << endl;
 
 	//WIDTH = robot->getWidth();
 	WIDTH = 80;
@@ -82,7 +85,7 @@ void MyGame::updatePosition(int enc_r, int enc_l) {
 
 	total_inches += inches;
 
-	theta += (left_inches - right_inches) / WIDTH;
+	theta += (left_inches - right_inches) / 5.5;
 	theta -= (float)((int)(theta / 6.2831853070)) * 6.2831853070;
 
 	inch_y_loc += (inches * cos(theta* 57.2958));
@@ -91,7 +94,7 @@ void MyGame::updatePosition(int enc_r, int enc_l) {
 	int pix_y_loc = inch_y_loc * 100; //100ppi
 	int pix_x_loc = inch_x_loc * 100; //100ppi
 
-	robot->position.x = 450+pix_x_loc;
+	robot->position.x = 451+pix_x_loc;
 	robot->position.y = 450+pix_y_loc;
 	robot->rotation = (theta * 180) / 3.14159;
 
