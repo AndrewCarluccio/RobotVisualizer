@@ -1,6 +1,6 @@
 ﻿  MyGame.cpp
 A:\Documents\GitHub\RobotVisualizer\src\main\MyGame.cpp(24,27): warning C4244:  '=': conversion from 'double' to 'int', possible loss of data
-A:\Documents\GitHub\RobotVisualizer\src\main\MyGame.cpp(25,28): warning C4244:  '=': conversion from 'double' to 'int', possible loss of data
-A:\Documents\GitHub\RobotVisualizer\src\main\MyGame.cpp(91,16): warning C4244:  'initializing': conversion from 'double' to 'int', possible loss of data
-A:\Documents\GitHub\RobotVisualizer\src\main\MyGame.cpp(92,16): warning C4244:  'initializing': conversion from 'double' to 'int', possible loss of data
+A:\Documents\GitHub\RobotVisualizer\src\main\MyGame.cpp(25,27): warning C4244:  '=': conversion from 'double' to 'int', possible loss of data
+A:\Documents\GitHub\RobotVisualizer\src\main\MyGame.cpp(96,16): warning C4244:  'initializing': conversion from 'double' to 'int', possible loss of data
+A:\Documents\GitHub\RobotVisualizer\src\main\MyGame.cpp(97,16): warning C4244:  'initializing': conversion from 'double' to 'int', possible loss of data
   RobotVisualizer.vcxproj -> A:\Documents\GitHub\RobotVisualizer\Debug\RobotVisualizer.exe

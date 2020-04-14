@@ -37,7 +37,9 @@ MyGame::MyGame() : Game(1200, 1000) {
 	*/
 	robot->position.x = 450;
 	robot->position.y = 450;
+	robot->rotation = 3.14159;
 
+	//theta = robot->rotation;
 }
 
 MyGame::~MyGame() {
@@ -96,7 +98,8 @@ void MyGame::updatePosition(int enc_r, int enc_l) {
 
 	robot->position.x = 451+pix_x_loc;
 	robot->position.y = 450+pix_y_loc;
-	robot->rotation = (theta * 180) / 3.14159;
+	robot->rotation = 3.14159 - ((theta * 180) / 3.14159);
+	//robot->rotation = theta * 3.14159 / 180;
 
 	right_encoder += delta_tick_right;
 	left_encoder += delta_tick_left;
@@ -136,6 +139,10 @@ void MyGame::update(set<SDL_Scancode> pressedKeys) {
 		cout << "Encoders: " << endl;
 		cout << "Position: " << robot->position.x << "," << 850 -robot->position.y << endl;
 		//cam->moveCameraBy(0, 5);
+	}
+
+	else if (pressedKeys.find(SDL_SCANCODE_R) != pressedKeys.end()) {
+		robot->rotation += 1;
 	}
 	Game::update(pressedKeys);
 	activeScene->update(pressedKeys);
