@@ -3,9 +3,11 @@
 #include <iostream>
 #include "MyGame.h"
 
-
-
 using namespace std;
+
+
+const int PORT_NUM = 8000;
+#define OSCPKT_OSTREAM_OUTPUT
 
 MyGame::MyGame() : Game(1200, 1000) {
 	//instance = this;
@@ -40,6 +42,9 @@ MyGame::MyGame() : Game(1200, 1000) {
 	robot->rotation = 3.14159;
 
 	//theta = robot->rotation;
+
+	sock.bindTo(PORT_NUM);
+
 }
 
 MyGame::~MyGame() {
@@ -107,6 +112,8 @@ void MyGame::updatePosition(int enc_r, int enc_l) {
 
 
 void MyGame::update(set<SDL_Scancode> pressedKeys) {
+	osc_process();
+
 	if (pressedKeys.find(SDL_SCANCODE_F) != pressedKeys.end()) {
 		updatePosition(right_encoder+1, left_encoder);
 
@@ -154,4 +161,29 @@ void MyGame::draw(AffineTransform& at) {
 	activeScene->draw(at,cam,true);
 	//activeScene->draw(at);
 	SDL_RenderPresent(Game::renderer);
+}
+
+void MyGame::osc_process() {
+	if (sock.isOk()) {
+		if (sock.receiveNextPacket(30)) {
+			pr.init(sock.packetData(), sock.packetSize());
+			oscpkt::Message* mess;
+			while (pr.isOk() && (mess = pr.popMessage()) != 0) {
+
+				if (mess->match("/zoom/pin")) {
+					float index;
+					if (mess->arg().popFloat(index).isOkNoMoreArgs()) {
+
+					}
+				}
+
+				else if (mess->match("/zoom/spot")) {
+					float index;
+					if (mess->arg().popFloat(index).isOkNoMoreArgs()) {
+
+					}
+				}
+			}
+		}
+	}
 }

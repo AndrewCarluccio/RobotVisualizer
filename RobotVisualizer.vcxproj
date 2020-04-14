@@ -118,8 +118,10 @@
     <ClCompile Include="src\engine\TweenTransition.cpp" />
     <ClCompile Include="src\main\main.cpp" />
     <ClCompile Include="src\main\MyGame.cpp" />
+    <ClCompile Include="src\OSC\stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Spout4Zoom\zoom-sdk-windows-master\demo\sdk_demo_v2\targetver.h" />
     <ClInclude Include="src\engine\AffineTransform.h" />
     <ClInclude Include="src\engine\AnimatedSprite.h" />
     <ClInclude Include="src\engine\Camera.h" />
@@ -140,6 +142,10 @@
     <ClInclude Include="src\engine\TweenParam.h" />
     <ClInclude Include="src\engine\TweenTransition.h" />
     <ClInclude Include="src\main\MyGame.h" />
+    <ClInclude Include="src\OSC\oscpkt.hh" />
+    <ClInclude Include="src\OSC\stdafx.h" />
+    <ClInclude Include="src\OSC\udp.hh" />
+    <ClInclude Include="src\OSC\WinsockWrapper.h" />
     <ClInclude Include="src\plugins\rapidjson\allocators.h" />
     <ClInclude Include="src\plugins\rapidjson\cursorstreamwrapper.h" />
     <ClInclude Include="src\plugins\rapidjson\document.h" />

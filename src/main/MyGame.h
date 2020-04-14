@@ -15,10 +15,13 @@
 #include "../engine/TweenEvent.h"
 #include "../engine/TweenListener.h"
 #include "../engine/Tween.h"
+#include "../OSC/oscpkt.hh"
+#include "../OSC/udp.hh"
 #include <cmath>
 
 
 using namespace std;
+using namespace oscpkt;
 
 class MyGame : public Game{
 
@@ -55,6 +58,11 @@ public:
 	double inch_x_loc = 0;
 
 	void updatePosition(int enc_r, int enc_l);
+
+	void osc_process();
+
+	UdpSocket sock;
+	PacketReader pr;
 
 private:
 	Scene* activeScene;

@@ -1,6 +1,28 @@
-﻿  MyGame.cpp
-A:\Documents\GitHub\RobotVisualizer\src\main\MyGame.cpp(24,27): warning C4244:  '=': conversion from 'double' to 'int', possible loss of data
-A:\Documents\GitHub\RobotVisualizer\src\main\MyGame.cpp(25,27): warning C4244:  '=': conversion from 'double' to 'int', possible loss of data
-A:\Documents\GitHub\RobotVisualizer\src\main\MyGame.cpp(96,16): warning C4244:  'initializing': conversion from 'double' to 'int', possible loss of data
-A:\Documents\GitHub\RobotVisualizer\src\main\MyGame.cpp(97,16): warning C4244:  'initializing': conversion from 'double' to 'int', possible loss of data
-  RobotVisualizer.vcxproj -> A:\Documents\GitHub\RobotVisualizer\Debug\RobotVisualizer.exe
+﻿  main.cpp
+C:\Users\akclu\Documents\GitHub\RobotVisualizer\src\OSC\oscpkt.hh(409,1): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : see declaration of 'strcpy'
+C:\Users\akclu\Documents\GitHub\RobotVisualizer\src\OSC\oscpkt.hh(434,1): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : see declaration of 'strcpy'
+C:\Users\akclu\Documents\GitHub\RobotVisualizer\src\OSC\oscpkt.hh(435,1): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : see declaration of 'strcpy'
+C:\Users\akclu\Documents\GitHub\RobotVisualizer\src\OSC\oscpkt.hh(590,1): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : see declaration of 'strcpy'
+C:\Users\akclu\Documents\GitHub\RobotVisualizer\src\OSC\udp.hh(183,1): warning C4996: 'gethostbyname': Use getaddrinfo() or GetAddrInfoW() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winsock2.h(2219): message : see declaration of 'gethostbyname'
+  MyGame.cpp
+C:\Users\akclu\Documents\GitHub\RobotVisualizer\src\OSC\oscpkt.hh(409,1): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : see declaration of 'strcpy'
+C:\Users\akclu\Documents\GitHub\RobotVisualizer\src\OSC\oscpkt.hh(434,1): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : see declaration of 'strcpy'
+C:\Users\akclu\Documents\GitHub\RobotVisualizer\src\OSC\oscpkt.hh(435,1): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : see declaration of 'strcpy'
+C:\Users\akclu\Documents\GitHub\RobotVisualizer\src\OSC\oscpkt.hh(590,1): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : see declaration of 'strcpy'
+C:\Users\akclu\Documents\GitHub\RobotVisualizer\src\OSC\udp.hh(183,1): warning C4996: 'gethostbyname': Use getaddrinfo() or GetAddrInfoW() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winsock2.h(2219): message : see declaration of 'gethostbyname'
+C:\Users\akclu\Documents\GitHub\RobotVisualizer\src\main\MyGame.cpp(26,27): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\akclu\Documents\GitHub\RobotVisualizer\src\main\MyGame.cpp(27,27): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\akclu\Documents\GitHub\RobotVisualizer\src\main\MyGame.cpp(101,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\akclu\Documents\GitHub\RobotVisualizer\src\main\MyGame.cpp(102,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  Generating Code...
+  RobotVisualizer.vcxproj -> C:\Users\akclu\Documents\GitHub\RobotVisualizer\Debug\RobotVisualizer.exe
