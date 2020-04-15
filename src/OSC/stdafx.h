@@ -12,15 +12,19 @@
 
 //#define WIN32_LEAN_AND_MEAN             // Exclude rarely-used stuff from Windows headers
 // Windows Header Files:
+
+#ifdef __WIN32
 # include <winsock2.h> 
 #include <windows.h>
+#include <tchar.h>
+#include <atltypes.h>
+#endif
 
 // C RunTime Header Files
 #include <stdlib.h>
 #include <malloc.h>
 #include <memory.h>
-#include <tchar.h>
-#include <atltypes.h>
+
 //#include "UIlib.h"
 //using namespace DuiLib;
 // TODO: reference additional headers your program requires here
